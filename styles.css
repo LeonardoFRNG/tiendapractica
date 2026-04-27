@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    background: #f5f5f5;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: white;
+    position: relative;
+}
+
+.logo-store {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+}
+
+.button {
+    background: purple;
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* HAMBURGUESA */
+.menu-icon {
+    display: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.img-hero {
+    width: 100%;
+    max-width: 400px;
+}
+
+.titulo-hero span {
+    color: purple;
+}
+
+/* ATRIBUTOS */
+.atributos {
+    display: flex;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.atributo {
+    flex: 1;
+    background: white;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+/* PRODUCTOS */
+.productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.card-producto {
+    background: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.card-producto img {
+    width: 100%;
+    max-width: 120px;
+}
+
+.card-producto a {
+    display: inline-block;
+    margin-top: 10px;
+    background: purple;
+    color: white;
+    padding: 5px;
+    text-decoration: none;
+}
+
+/* TABLA */
+.tabla {
+    padding: 2rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid gray;
+    padding: 10px;
+    text-align: center;
+}
+
+/* FOOTER */
+footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* ================= */
+/* RESPONSIVE */
+/* ================= */
+
+@media (max-width: 768px) {
+
+    /* NAV */
+    .menu {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: white;
+        width: 100%;
+        flex-direction: column;
+        display: none;
+    }
+
+    #menu-toggle:checked + .menu-icon + .menu {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    /* HERO */
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* ATRIBUTOS */
+    .atributos {
+        flex-direction: column;
+    }
+
+    /* PRODUCTOS */
+    .productos {
+        grid-template-columns: 1fr;
+    }
+}
